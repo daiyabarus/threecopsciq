@@ -2,15 +2,12 @@ import csv
 import traceback
 import os
 from openpyxl import Workbook, load_workbook
-from openpyxl.styles import PatternFill
-from openpyxl.styles.borders import Border, Side
-from openpyxl.styles import Alignment
-from openpyxl.styles import Font
+from openpyxl.styles import PatternFill, Border, Side, Alignment, Font
 
-redFill = PatternFill(start_color="FFFF0000", end_color="FFFF0000", fill_type="solid")
-darkRedText = Font(color="FF800000")
-greenFill = PatternFill(start_color="FF00FF00", end_color="FF00FF00", fill_type="solid")
-darkGreenText = Font(color="FF008000")
+redFill = PatternFill(start_color="FFFFC7CE", end_color="FFFFC7CE", fill_type="solid")
+darkRedText = Font(color="FF9C0006")
+greenFill = PatternFill(start_color="FFC6EFCE", end_color="FFC6EFCE", fill_type="solid")
+darkGreenText = Font(color="FF006100")
 
 thin_border = Border(
     left=Side(style="thin"),
