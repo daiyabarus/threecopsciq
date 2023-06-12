@@ -32,6 +32,8 @@ Pipfile.lock
 .vscode/
 test/
 .flake8
+/utils/pojo_maker.py
+/utils/pojo_maker_lower.py
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
