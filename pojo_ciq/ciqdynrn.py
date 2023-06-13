@@ -3,7 +3,7 @@ from utils.to_get import ExclusiveEnum as eEnum
 from utils.to_get import gval
 
 
-class CellToFindEnum(eEnum):
+class DynRNEnum(eEnum):
     rbsId = "rbsId"
     sector_Number = "sector_Number"
     carrier = "carrier"
@@ -62,7 +62,7 @@ class CellToFindEnum(eEnum):
     MocnCellProfile = "MocnCellProfile"
 
 
-class CellToFindIndex:
+class DynRNIndex:
     def __init__(self) -> None:
         self.rbsId = 0
         self.sector_Number = 1
@@ -123,7 +123,7 @@ class CellToFindIndex:
         self.last_index = 56
 
 
-class CellToFind:
+class DynRN:
     def __init__(
         self,
         rbsId: str,
@@ -432,7 +432,7 @@ class CellToFind:
         ]
 
     @classmethod
-    def from_row(cls, row: any, idx: CellToFindIndex):
+    def from_row(cls, row: any, idx: DynRNIndex):
         return cls(
             rbsId=gval(row[idx.rbsId]),
             sector_Number=gval(row[idx.sector_Number]),

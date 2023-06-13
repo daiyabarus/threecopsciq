@@ -1,0 +1,282 @@
+from typing import List
+from utils.to_get import ExclusiveEnum as eEnum
+from utils.to_get import gval
+
+
+class EutranFreqRelationEnum(eEnum):
+    RNC = "RNC"
+    Utrancell = "Utrancell"
+    eutraDetection = "eutraDetection"
+    RelationId_1 = "RelationId_1"
+    earfcnDL_1 = "earfcnDL_1"
+    cellReselectionPriority_1 = "cellReselectionPriority_1"
+    qRxLevMin_1 = "qRxLevMin_1"
+    threshHigh_1 = "threshHigh_1"
+    threshLow_1 = "threshLow_1"
+    redirectionOrder_1 = "redirectionOrder_1"
+    RelationId_2 = "RelationId_2"
+    earfcnDL_2 = "earfcnDL_2"
+    cellReselectionPriority_2 = "cellReselectionPriority_2"
+    qRxLevMin_2 = "qRxLevMin_2"
+    threshHigh_2 = "threshHigh_2"
+    threshLow_2 = "threshLow_2"
+    redirectionOrder_2 = "redirectionOrder_2"
+    RelationId_3 = "RelationId_3"
+    earfcnDL_3 = "earfcnDL_3"
+    cellReselectionPriority_3 = "cellReselectionPriority_3"
+    qRxLevMin_3 = "qRxLevMin_3"
+    threshHigh_3 = "threshHigh_3"
+    threshLow_3 = "threshLow_3"
+    redirectionOrder_3 = "redirectionOrder_3"
+    RelationId_4 = "RelationId_4"
+    earfcnDL_4 = "earfcnDL_4"
+    cellReselectionPriority_4 = "cellReselectionPriority_4"
+    qRxLevMin_4 = "qRxLevMin_4"
+    threshHigh_4 = "threshHigh_4"
+    threshLow_4 = "threshLow_4"
+    redirectionOrder_4 = "redirectionOrder_4"
+
+
+class EutranFreqRelationIndex:
+    def __init__(self) -> None:
+        self.RNC = 0
+        self.Utrancell = 1
+        self.eutraDetection = 2
+        self.RelationId_1 = 3
+        self.earfcnDL_1 = 4
+        self.cellReselectionPriority_1 = 5
+        self.qRxLevMin_1 = 6
+        self.threshHigh_1 = 7
+        self.threshLow_1 = 8
+        self.redirectionOrder_1 = 9
+        self.RelationId_2 = 10
+        self.earfcnDL_2 = 11
+        self.cellReselectionPriority_2 = 12
+        self.qRxLevMin_2 = 13
+        self.threshHigh_2 = 14
+        self.threshLow_2 = 15
+        self.redirectionOrder_2 = 16
+        self.RelationId_3 = 17
+        self.earfcnDL_3 = 18
+        self.cellReselectionPriority_3 = 19
+        self.qRxLevMin_3 = 20
+        self.threshHigh_3 = 21
+        self.threshLow_3 = 22
+        self.redirectionOrder_3 = 23
+        self.RelationId_4 = 24
+        self.earfcnDL_4 = 25
+        self.cellReselectionPriority_4 = 26
+        self.qRxLevMin_4 = 27
+        self.threshHigh_4 = 28
+        self.threshLow_4 = 29
+        self.redirectionOrder_4 = 30
+        self.last_index = 31
+
+
+class EutranFreqRelation:
+    def __init__(
+        self,
+        RNC: str,
+        Utrancell: str,
+        eutraDetection: str,
+        RelationId_1: str,
+        earfcnDL_1: str,
+        cellReselectionPriority_1: str,
+        qRxLevMin_1: str,
+        threshHigh_1: str,
+        threshLow_1: str,
+        redirectionOrder_1: str,
+        RelationId_2: str,
+        earfcnDL_2: str,
+        cellReselectionPriority_2: str,
+        qRxLevMin_2: str,
+        threshHigh_2: str,
+        threshLow_2: str,
+        redirectionOrder_2: str,
+        RelationId_3: str,
+        earfcnDL_3: str,
+        cellReselectionPriority_3: str,
+        qRxLevMin_3: str,
+        threshHigh_3: str,
+        threshLow_3: str,
+        redirectionOrder_3: str,
+        RelationId_4: str,
+        earfcnDL_4: str,
+        cellReselectionPriority_4: str,
+        qRxLevMin_4: str,
+        threshHigh_4: str,
+        threshLow_4: str,
+        redirectionOrder_4: str,
+    ) -> None:
+        self.RNC = RNC
+        self.Utrancell = Utrancell
+        self.eutraDetection = eutraDetection
+        self.RelationId_1 = RelationId_1
+        self.earfcnDL_1 = earfcnDL_1
+        self.cellReselectionPriority_1 = cellReselectionPriority_1
+        self.qRxLevMin_1 = qRxLevMin_1
+        self.threshHigh_1 = threshHigh_1
+        self.threshLow_1 = threshLow_1
+        self.redirectionOrder_1 = redirectionOrder_1
+        self.RelationId_2 = RelationId_2
+        self.earfcnDL_2 = earfcnDL_2
+        self.cellReselectionPriority_2 = cellReselectionPriority_2
+        self.qRxLevMin_2 = qRxLevMin_2
+        self.threshHigh_2 = threshHigh_2
+        self.threshLow_2 = threshLow_2
+        self.redirectionOrder_2 = redirectionOrder_2
+        self.RelationId_3 = RelationId_3
+        self.earfcnDL_3 = earfcnDL_3
+        self.cellReselectionPriority_3 = cellReselectionPriority_3
+        self.qRxLevMin_3 = qRxLevMin_3
+        self.threshHigh_3 = threshHigh_3
+        self.threshLow_3 = threshLow_3
+        self.redirectionOrder_3 = redirectionOrder_3
+        self.RelationId_4 = RelationId_4
+        self.earfcnDL_4 = earfcnDL_4
+        self.cellReselectionPriority_4 = cellReselectionPriority_4
+        self.qRxLevMin_4 = qRxLevMin_4
+        self.threshHigh_4 = threshHigh_4
+        self.threshLow_4 = threshLow_4
+        self.redirectionOrder_4 = redirectionOrder_4
+
+    def __str__(self) -> str:
+        scr = f"RNC: {self.RNC}" + "\n"
+        scr += f"Utrancell: {self.Utrancell}" + "\n"
+        scr += f"eutraDetection: {self.eutraDetection}" + "\n"
+        scr += f"RelationId_1: {self.RelationId_1}" + "\n"
+        scr += f"earfcnDL_1: {self.earfcnDL_1}" + "\n"
+        scr += f"cellReselectionPriority_1: {self.cellReselectionPriority_1}" + "\n"
+        scr += f"qRxLevMin_1: {self.qRxLevMin_1}" + "\n"
+        scr += f"threshHigh_1: {self.threshHigh_1}" + "\n"
+        scr += f"threshLow_1: {self.threshLow_1}" + "\n"
+        scr += f"redirectionOrder_1: {self.redirectionOrder_1}" + "\n"
+        scr += f"RelationId_2: {self.RelationId_2}" + "\n"
+        scr += f"earfcnDL_2: {self.earfcnDL_2}" + "\n"
+        scr += f"cellReselectionPriority_2: {self.cellReselectionPriority_2}" + "\n"
+        scr += f"qRxLevMin_2: {self.qRxLevMin_2}" + "\n"
+        scr += f"threshHigh_2: {self.threshHigh_2}" + "\n"
+        scr += f"threshLow_2: {self.threshLow_2}" + "\n"
+        scr += f"redirectionOrder_2: {self.redirectionOrder_2}" + "\n"
+        scr += f"RelationId_3: {self.RelationId_3}" + "\n"
+        scr += f"earfcnDL_3: {self.earfcnDL_3}" + "\n"
+        scr += f"cellReselectionPriority_3: {self.cellReselectionPriority_3}" + "\n"
+        scr += f"qRxLevMin_3: {self.qRxLevMin_3}" + "\n"
+        scr += f"threshHigh_3: {self.threshHigh_3}" + "\n"
+        scr += f"threshLow_3: {self.threshLow_3}" + "\n"
+        scr += f"redirectionOrder_3: {self.redirectionOrder_3}" + "\n"
+        scr += f"RelationId_4: {self.RelationId_4}" + "\n"
+        scr += f"earfcnDL_4: {self.earfcnDL_4}" + "\n"
+        scr += f"cellReselectionPriority_4: {self.cellReselectionPriority_4}" + "\n"
+        scr += f"qRxLevMin_4: {self.qRxLevMin_4}" + "\n"
+        scr += f"threshHigh_4: {self.threshHigh_4}" + "\n"
+        scr += f"threshLow_4: {self.threshLow_4}" + "\n"
+        scr += f"redirectionOrder_4: {self.redirectionOrder_4}" + "\n"
+        return scr
+
+    def get_list(self) -> List[str]:
+        return [
+            self.RNC,
+            self.Utrancell,
+            self.eutraDetection,
+            self.RelationId_1,
+            self.earfcnDL_1,
+            self.cellReselectionPriority_1,
+            self.qRxLevMin_1,
+            self.threshHigh_1,
+            self.threshLow_1,
+            self.redirectionOrder_1,
+            self.RelationId_2,
+            self.earfcnDL_2,
+            self.cellReselectionPriority_2,
+            self.qRxLevMin_2,
+            self.threshHigh_2,
+            self.threshLow_2,
+            self.redirectionOrder_2,
+            self.RelationId_3,
+            self.earfcnDL_3,
+            self.cellReselectionPriority_3,
+            self.qRxLevMin_3,
+            self.threshHigh_3,
+            self.threshLow_3,
+            self.redirectionOrder_3,
+            self.RelationId_4,
+            self.earfcnDL_4,
+            self.cellReselectionPriority_4,
+            self.qRxLevMin_4,
+            self.threshHigh_4,
+            self.threshLow_4,
+            self.redirectionOrder_4,
+        ]
+
+    @staticmethod
+    def get_header() -> List[str]:
+        return [
+            "RNC",
+            "Utrancell",
+            "eutraDetection",
+            "RelationId_1",
+            "earfcnDL_1",
+            "cellReselectionPriority_1",
+            "qRxLevMin_1",
+            "threshHigh_1",
+            "threshLow_1",
+            "redirectionOrder_1",
+            "RelationId_2",
+            "earfcnDL_2",
+            "cellReselectionPriority_2",
+            "qRxLevMin_2",
+            "threshHigh_2",
+            "threshLow_2",
+            "redirectionOrder_2",
+            "RelationId_3",
+            "earfcnDL_3",
+            "cellReselectionPriority_3",
+            "qRxLevMin_3",
+            "threshHigh_3",
+            "threshLow_3",
+            "redirectionOrder_3",
+            "RelationId_4",
+            "earfcnDL_4",
+            "cellReselectionPriority_4",
+            "qRxLevMin_4",
+            "threshHigh_4",
+            "threshLow_4",
+            "redirectionOrder_4",
+        ]
+
+    @classmethod
+    def from_row(cls, row: any, idx: EutranFreqRelationIndex):
+        return cls(
+            RNC=gval(row[idx.RNC]),
+            Utrancell=gval(row[idx.Utrancell]),
+            eutraDetection=gval(row[idx.eutraDetection]),
+            RelationId_1=gval(row[idx.RelationId_1]),
+            earfcnDL_1=gval(row[idx.earfcnDL_1]),
+            cellReselectionPriority_1=gval(row[idx.cellReselectionPriority_1]),
+            qRxLevMin_1=gval(row[idx.qRxLevMin_1]),
+            threshHigh_1=gval(row[idx.threshHigh_1]),
+            threshLow_1=gval(row[idx.threshLow_1]),
+            redirectionOrder_1=gval(row[idx.redirectionOrder_1]),
+            RelationId_2=gval(row[idx.RelationId_2]),
+            earfcnDL_2=gval(row[idx.earfcnDL_2]),
+            cellReselectionPriority_2=gval(row[idx.cellReselectionPriority_2]),
+            qRxLevMin_2=gval(row[idx.qRxLevMin_2]),
+            threshHigh_2=gval(row[idx.threshHigh_2]),
+            threshLow_2=gval(row[idx.threshLow_2]),
+            redirectionOrder_2=gval(row[idx.redirectionOrder_2]),
+            RelationId_3=gval(row[idx.RelationId_3]),
+            earfcnDL_3=gval(row[idx.earfcnDL_3]),
+            cellReselectionPriority_3=gval(row[idx.cellReselectionPriority_3]),
+            qRxLevMin_3=gval(row[idx.qRxLevMin_3]),
+            threshHigh_3=gval(row[idx.threshHigh_3]),
+            threshLow_3=gval(row[idx.threshLow_3]),
+            redirectionOrder_3=gval(row[idx.redirectionOrder_3]),
+            RelationId_4=gval(row[idx.RelationId_4]),
+            earfcnDL_4=gval(row[idx.earfcnDL_4]),
+            cellReselectionPriority_4=gval(row[idx.cellReselectionPriority_4]),
+            qRxLevMin_4=gval(row[idx.qRxLevMin_4]),
+            threshHigh_4=gval(row[idx.threshHigh_4]),
+            threshLow_4=gval(row[idx.threshLow_4]),
+            redirectionOrder_4=gval(row[idx.redirectionOrder_4]),
+        )
